@@ -1,0 +1,62 @@
+If we omit the:
+
+1) first line of the program (the #include statement), we get the following compiler warning:
+
+ex1_1.c: In function ‘main’:
+ex1_1.c:4:2: warning: implicit declaration of function ‘printf’ [-Wimplicit-function-declaration]
+    4 |  printf("Hello world\n");
+      |  ^~~~~~
+ex1_1.c:4:2: warning: incompatible implicit declaration of built-in function ‘printf’
+ex1_1.c:1:1: note: include ‘<stdio.h>’ or provide a declaration of ‘printf’
+  +++ |+#include <stdio.h>
+    1 | 
+
+The printf() function is included in the standard library but since we haven't included it, it cannot be found. However, the GCC compiler understands this and adds the include statement automatically.
+
+2) the "main()" line (including the 2 curly brackets):
+
+ex1_1.c:3:8: error: expected declaration specifiers or ‘...’ before string constant
+    3 | printf("Hello world\n");
+
+The printf() function statement should be inside the main function. The absence of the main function provokes the aforementioned error.
+
+3) the printf() statement:
+
+It compiles successfully, but the program doesn't output any text when executed.
+
+4) the semicolon at the end of the printf() statement:
+
+ex1_1.c:5:25: error: expected ‘;’ before ‘}’ token
+    5 |  printf("Hello world\n")
+      |                         ^
+      |                         ;
+    6 | }
+      | ~ 
+
+The semicolon is needed in the end of every statement.
+
+5) the curly brackets:
+
+ex1_1.c: In function ‘main’:
+ex1_1.c:5:2: error: expected declaration specifiers before ‘printf’
+    5 |  printf("Hello world\n");
+      |  ^~~~~~
+ex1_1.c:6: error: expected ‘{’ at end of input
+    6 | 
+      | 
+
+6) the quotation marks inside the printf() statement:
+
+ex1_1.c: In function ‘main’:
+ex1_1.c:5:9: error: ‘Hello’ undeclared (first use in this function); did you mean ‘ftello’?
+    5 |  printf(Hello world\n);
+      |         ^~~~~
+      |         ftello
+ex1_1.c:5:9: note: each undeclared identifier is reported only once for each function it appears in
+ex1_1.c:5:14: error: expected ‘)’ before ‘world’
+    5 |  printf(Hello world\n);
+      |              ^~~~~~
+      |              )
+ex1_1.c:5:20: error: stray ‘\’ in program
+    5 |  printf(Hello world\n);
+      |      

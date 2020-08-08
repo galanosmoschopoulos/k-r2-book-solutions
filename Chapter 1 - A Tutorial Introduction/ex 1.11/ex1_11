@@ -1,0 +1,4 @@
+1) If the amount of input text is extremely large, it would leed to an integer overflow of the variable nc, and maybe the variables nw and nl.
+2) If the input text contains non english characters, such as the greek "α", the character counter produces a wrong result.
+3) If the input text is only newlines, the character counter is wrong ("\n" should not be considered as a text character under normal -non programming- conditions).
+

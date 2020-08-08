@@ -1,0 +1,30 @@
+If we include the special character
+
+1) \d , we get the following message from the compiler:
+
+ex1_2.c: In function ‘main’:
+ex1_2.c:5:26: warning: unknown escape sequence: '\d'
+    5 |  printf("Hello world. \d");
+      |    
+
+2) \e, we get the following output:
+
+Hello world. %  
+
+3) \f, we get the following output:
+
+Hello world. 
+             %    
+
+4) \g, [same as \d]
+
+5) \r, we get no output at all.
+
+6) \v, we get the following output:
+
+Hello world. 
+             %   
+
+7) \', we get the following output:
+
+Hello world. '
