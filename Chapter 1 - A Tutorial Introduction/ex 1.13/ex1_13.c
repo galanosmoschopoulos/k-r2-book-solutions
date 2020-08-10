@@ -39,7 +39,7 @@ main()
 	printf("\n\nLength | No of words\n-------|------------\n");
 	for (i = minLengthDetected-1; i < maxLengthDetected; ++i) {
 		printf("%6d | ", i+1);
-		printf("(%d) ", wordLengths[i]);
+		printf("(%2d) ", wordLengths[i]);
 		for (j = 0; j < wordLengths[i]; ++j)
 			putchar('#');
 		putchar('\n');
