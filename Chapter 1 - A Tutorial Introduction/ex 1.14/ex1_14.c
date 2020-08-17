@@ -1,3 +1,8 @@
+/*
+			TO BE REVISED -- IT IS ONLY CAPABLE  TO DETECT THE LETTERS OF THE ENGLISH ALPHABET
+			I WANT IT TO WORK WITH MOST OF THE ASCII CHARACTERS
+*/
+
 #include <stdio.h>
 
 #define CHAR_NUMBER	26 // 26 letters in english alphabet 
