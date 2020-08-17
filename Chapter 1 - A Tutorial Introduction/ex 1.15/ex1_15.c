@@ -15,13 +15,14 @@ int main()
 
 	return 0;
 }
+
+// Convert the temperature from fahreneit to celsius
 float tempConvertion(int fahr)
 {
 	int celsius;
 	celsius = (5.0/9.0)*(fahr-32);								// Calculate the temperature in celsius
 	return celsius;												// Return calculated value
 }
-
 
 /* Alternative:
  * float tempConvertion(int fahr)
