@@ -5,11 +5,11 @@
 
 int main()
 {
-	int c, alreadyPrinted;				// alreadyPrinted is used to replace else
+	int c, alreadyPrinted;              // alreadyPrinted is used to replace else
 
-	while ((c = getchar()) != EOF) {	// Run as long as the user hasn't entered EOF
+	while ((c = getchar()) != EOF) {    // Run as long as the user hasn't entered EOF
 		alreadyPrinted = NO;
-		if (c == '\t') {				// If a blank, a tab, a backspace or a backslash is detected, print C's representation special character 
+		if (c == '\t') {                // If a blank, a tab, a backspace or a backslash is detected, print C's representation special character 
 			putchar('\\');
 			putchar('t');
 			alreadyPrinted = YES;
@@ -24,7 +24,7 @@ int main()
 			putchar('\\');
 			alreadyPrinted = YES;
 		}
-		if (alreadyPrinted == NO)		// If no special character was detected, print the char
+		if (alreadyPrinted == NO)       // If no special character was detected, print the char
 			putchar(c);
 	}
 }
